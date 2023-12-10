@@ -1,6 +1,9 @@
-QUESTION: https://leetcode.com/problems/valid-parentheses/
+package Practise;
 
-public boolean isValid(String s) {
+import java.util.ArrayDeque;//QUESTION: https://leetcode.com/problems/valid-parentheses/
+
+public class ValidParenthesis {
+    public boolean isValid(String s) {
         ArrayDeque<Character> stack = new ArrayDeque<>();
         for(int i=0; i<s.length(); i++){
             char ch = s.charAt(i);
@@ -30,3 +33,4 @@ public boolean isValid(String s) {
         }
         return true;
     }
+}
