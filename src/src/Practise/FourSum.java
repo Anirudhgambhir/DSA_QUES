@@ -16,7 +16,7 @@ public class FourSum {
             for (int j = i + 1; j < nums.length; j++) {
                 for (int k = j + 1; k < nums.length; k++) {
                     for (int l = k + 1; l < nums.length; l++) {
-                        long sum = (int) nums[i] + nums[j];
+                        long sum = nums[i] + nums[j];
                         sum += nums[k];
                         sum += nums[l];
 
@@ -39,7 +39,7 @@ public class FourSum {
             for (int j = i + 1; j < nums.length; j++) {
                 Set<Long> findFourthElement = new HashSet<>();
                 for (int k = j + 1; k < nums.length; k++) {
-                    long sum = (int) nums[i] + nums[j];
+                    long sum = nums[i] + nums[j];
                     sum += nums[k];
                     long remaining = target - sum;
                     if (findFourthElement.contains(remaining)) {
