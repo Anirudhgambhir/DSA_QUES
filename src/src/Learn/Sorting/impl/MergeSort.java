@@ -1,8 +1,9 @@
 package Learn.Sorting.impl;
 
-public class MergeSort {
+import Learn.Sorting.Sort;
 
-    void merge(int a[], int l, int m, int r)
+public class MergeSort implements Sort {
+    void merge(int[] a, int l, int m, int r)
     {
         int n1 = m - l + 1;
         int n2 = r - m;
@@ -44,5 +45,10 @@ public class MergeSort {
             mergeSort(a, mid + 1, r);
             merge(a, l, mid, r);
         }
+    }
+
+    @Override
+    public void sort(int[] a) {
+        mergeSort(a, 0, a.length-1);
     }
 }
